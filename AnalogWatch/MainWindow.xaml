@@ -15,14 +15,11 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <analogClock:Clock x:Name="Clock"
-                           Width="588"
-                           Height="588"
+                           
                            Margin="10"
                            Style="{StaticResource TestClockStyle}" />
 
         <analogClock:Clock Grid.Column="1"
-                           Width="588"
-                           Height="588"
                            Margin="10"
                            Style="{StaticResource OldStyleClockStyle}" />
         <ComboBox Width="152"
