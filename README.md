@@ -17,4 +17,4 @@ need to be defined along the full diameter (not radius). The center of these ele
 
 
 
-![clockfaces](/ClockFaces.png)
+![clockfaces](/ClockFaces.jpg)
