@@ -1,0 +1,179 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:analogClock="clr-namespace:AnalogWatch.AnalogClock"
+                    xmlns:local="clr-namespace:AnalogWatch">
+    <local:ProportionalConverter x:Key="ProportionalConverter" />
+
+    <Style x:Key="Modern1HourMajorTickStyle"
+           TargetType="{x:Type analogClock:HourTick}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type analogClock:HourTick}">
+                    <Grid Height="11"
+                          RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <RotateTransform Angle="{Binding Angle, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Grid.RenderTransform>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Grid.Column="1"
+                                   Height="4"
+                                   Fill="Red" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Modern1HourTickStyle"
+           TargetType="{x:Type analogClock:HourTick}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type analogClock:HourTick}">
+                    <Grid Height="11"
+                          RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <RotateTransform Angle="{Binding Angle, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Grid.RenderTransform>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Grid.Column="1"
+                                   Height="4"
+                                   Fill="Black" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Modern1MinuteTickStyle"
+           TargetType="{x:Type analogClock:MinuteTick}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type analogClock:MinuteTick}">
+                    <Grid Height="11"
+                          RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <RotateTransform Angle="{Binding Angle, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Grid.RenderTransform>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Grid.Column="1"
+                                   Width="5"
+                                   Height="5"
+                                   Fill="Black" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Modern1HourHandStyle"
+           TargetType="{x:Type analogClock:HourHand}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type analogClock:HourHand}">
+                    <Grid Height="11"
+                          RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <RotateTransform Angle="{Binding Angle, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Grid.RenderTransform>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="11*" />
+                            <ColumnDefinition Width="9*" />
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Grid.Column="1"
+                                   Height="7"
+                                   Fill="Black" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Modern1MinuteHandStyle"
+           TargetType="{x:Type analogClock:MinuteHand}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type analogClock:MinuteHand}">
+                    <Grid Height="11"
+                          RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <RotateTransform Angle="{Binding Angle, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Grid.RenderTransform>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="18*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Grid.Column="1"
+                                   Height="7"
+                                   Fill="Black" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Modern1SecondHandStyle"
+           TargetType="{x:Type analogClock:SecondHand}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type analogClock:SecondHand}">
+                    <Grid x:Name="PART_Rotate"
+                          Height="11"
+                          RenderTransformOrigin="0.5,0.5">
+                        <Rectangle Grid.Column="1"
+                                   Width="7"
+                                   Height="7"
+                                   HorizontalAlignment="Right"
+                                   Fill="Red" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Modern1ClockStyle"
+           TargetType="{x:Type analogClock:Clock}">
+        <Setter Property="HourMajorTickStyle" Value="{StaticResource Modern1HourMajorTickStyle}" />
+        <Setter Property="HourTickStyle" Value="{StaticResource Modern1HourTickStyle}" />
+        <Setter Property="MinuteTickStyle" Value="{x:Null}" />
+        <Setter Property="HourHandStyle" Value="{StaticResource Modern1HourHandStyle}" />
+        <Setter Property="MinuteHandStyle" Value="{StaticResource Modern1MinuteHandStyle}" />
+        <Setter Property="SecondHandStyle" Value="{StaticResource Modern1SecondHandStyle}" />
+        <Setter Property="ShowHourMajorTicks" Value="12" />
+        <Setter Property="ShowHourTicks" Value="3,6,9" />
+        <Setter Property="ShowSecondHand" Value="True" />
+        <Setter Property="SecondMode" Value="Continuous" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type analogClock:Clock}">
+                    <Grid>
+                        <Grid x:Name="PART_Surface"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center">
+                            <Grid x:Name="PART_TicksContainer"
+                                  Grid.Column="1"
+                                  Margin="0,0,0,0" />
+                            <Ellipse Width="{Binding ActualWidth,
+                                                     ElementName=PART_Surface,
+                                                     Converter={StaticResource ProportionalConverter},
+                                                     ConverterParameter='0.1024'}"
+                                     Height="{Binding ActualWidth,
+                                                      RelativeSource={RelativeSource Self}}"
+                                     Fill="White" />
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

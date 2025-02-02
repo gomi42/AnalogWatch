@@ -1,0 +1,25 @@
+﻿<Application x:Class="AnalogWatch.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:analogClock="clr-namespace:AnalogWatch.AnalogClock"
+             xmlns:analogwatch="clr-namespace:AnalogWatch"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="TestClockFace.xaml" />
+                <ResourceDictionary Source="StationClockFace.xaml" />
+                <ResourceDictionary Source="MaxBill1ClockFace.xaml" />
+                <ResourceDictionary Source="MaxBill2ClockFace.xaml" />
+                <ResourceDictionary Source="Modern1ClockFace.xaml" />
+                <ResourceDictionary Source="Modern2ClockFace.xaml" />
+                <ResourceDictionary Source="Modern3ClockFace.xaml" />
+                <ResourceDictionary Source="Modern4ClockFace.xaml" />
+                <ResourceDictionary Source="SquareClockFace.xaml" />
+                <ResourceDictionary Source="KitchenClockFace.xaml" />
+                <ResourceDictionary Source="OldStyleClockFace.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
